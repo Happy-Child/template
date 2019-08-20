@@ -3,25 +3,18 @@ include ../pug/helpers/mixins
 
 
 block variables
-	- const title = "About us";
-	- const bodyClass = "about-us";
+	- const title = "Home";
+	- const bodyClass = "home";
+
+
+block append styles
+	link(rel="stylesheet" href="styles/home.css")
+
 
 block content
-
-	//Header BEGIN
-	include ../blocks/header/header
-	//Header END
-	
-	//Page content BEGIN
-	include ../blocks/pages/about-us/about-us
-	//Page content END
-
-	//Footer BEGIN
-	include ../blocks/footer/footer
-	//Footer END
+	include ../blocks/pages/home/home
 
 
 
 block append scripts
-	script(src="js/common.js")
-	script(src="js/about-us.js")
+	script(src="js/home.js")

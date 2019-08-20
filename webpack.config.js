@@ -4,8 +4,7 @@ const path = require("path");
 
 module.exports = {
 	entry: {
-		"common": "./src/js/common.js",
-		"about-us": "./src/blocks/pages/about-us/about-us.js",
+		"home": "./src/blocks/pages/home/home.js",
 		"critical-scripts": "./src/js/critical-scripts.js"
 	},
 
@@ -53,6 +52,7 @@ module.exports = {
 		alias: {
 			"%blocks%": path.resolve(__dirname, "src/blocks"),
 			"%js%": path.resolve(__dirname, "src/js"),
+			"%styles%": path.resolve(__dirname, "src/styles"),
 			"%helpers%": path.resolve(__dirname, "src/js/helpers"),
 			"%vendor%": path.resolve(__dirname, "src/js/vendor")
 		}

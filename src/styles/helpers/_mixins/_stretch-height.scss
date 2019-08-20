@@ -1,5 +1,5 @@
 @mixin stretchHeight ($percent) {
-	content: "";
-	padding-top: $percent;
-	display: block;
+  content: "";
+  padding-top: $percent;
+  display: block;
 }

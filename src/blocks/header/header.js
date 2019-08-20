@@ -1,28 +1,27 @@
 // -- Helpers BEGIN
 const documentReady = require("%helpers%/document-ready.js");
-const windowLoad = require("%helpers%/window-load.js");
 const breakpoints = require("%helpers%/breakpoints.js");
-const isDesktop = require("%helpers%/is-desktop.js");
-const isIE = require("%helpers%/is-ie.js");
-const isEdge = require("%helpers%/is-edge.js");
-const cleanFieldsForms = require("%helpers%/clean-fields-forms.js");
-const inputFilter = require("%helpers%/input-filter.js");
 // -- Helpers END
 
-
-// -- Libraries BEGIN
-// -- Libraries END
-
-
 documentReady(function() {
-	const ex = $(".header");
+	const $header = $(".header"),
+		$menu = $header.find(".header__nav"),
+		$menuBtn = $header.find(".header__btn"),
+		$page = $("html, body");
 
 	// -- Functions BEGIN
-	const fn = () => {
-		console.log("header");
+	const changeStateMenu = () => {
+		$menuBtn.toggleClass("header__btn_active");
+		$menu.toggleClass("header__nav_visible");
+		$page.toggleClass("page-fixed");
+	};
+
+	const initMenuBtn = () => {
+		$menuBtn.on("click", function () {
+			changeStateMenu();
+		});
 	};
 	// -- Functions END
 
-
-	if (ex.length) fn();
+	if ($menuBtn.length) initMenuBtn();
 });

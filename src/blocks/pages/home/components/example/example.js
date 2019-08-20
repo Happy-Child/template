@@ -1,8 +1,3 @@
-// -- Components BEGIN
-import "%blocks%/main-menu/components/components.js";
-// -- Components END
-
-
 // -- Helpers BEGIN
 const documentReady = require("%helpers%/document-ready.js");
 const windowLoad = require("%helpers%/window-load.js");

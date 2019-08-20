@@ -16,7 +16,10 @@ const paths = {
 		]
 	},
 	styles: {
-		src: "./src/styles/*.scss",
+		src: [
+			"./src/styles/critical-styles.scss",
+			"./src/blocks/pages/home/home.scss"
+		],
 		dist: "./dist/styles/",
 		watch: [
 			"./src/blocks/**/*.scss",
@@ -24,7 +27,10 @@ const paths = {
 		]
 	},
 	scripts: {
-		src: "./src/js/common.js",
+		src: [
+			"./src/js/critical-scripts.js",
+			"./src/blocks/pages/home/home.js",
+		],
 		dist: "./dist/js/",
 		watch: [
 			"./src/blocks/**/*.js",

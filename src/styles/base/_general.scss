@@ -1,84 +1,76 @@
 * {
-	box-sizing: border-box
+  box-sizing: border-box
 }
 
 html {
-	font-size: 24px;
+  font-size: 16px;
 
-	&.page-fixed {
-		overflow: hidden;
-	}
+  @include media (xl) {
+    font-size: 14px;
+  }
 
-	@include media (1600px) {
-		font-size: 20px;
-	}
-
-	@include media (md) {
-		font-size: 18px;
-	}
-}
-
-.html-scroll {
-	overflow-y: scroll;
-	overflow-x: hidden;
+  &.page-fixed {
+    overflow: hidden;
+  }
 }
 
 body {
-	min-width: 320px;
-	position: relative;
-	line-height: 36px;
-	color: $default-text;
-	font-kerning: normal;
-	display: flex;
-	flex-direction: column;
-	overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  line-height: 24px;
+  color: $default-text;
+  font-kerning: normal;
+  overflow-x: hidden;
+  transition: .4s opacity ease;
 
-	@include media (1600px) {
-		line-height: 30px;
-	}
+  @include media (xl) {
+    line-height: 22px;
+  }
 
-	&.page-fixed {
-		overflow-y: scroll;
-	}
+  &.page-fixed {
+    overflow-y: scroll;
+  }
 
-	&.visible {
-		opacity: 1;
-	}
+  &.visible {
+    opacity: 1;
+  }
 }
 
 img.lazy {
-	transition: .6s all ease;
-	opacity: 0;
+  transition: .6s all ease;
+  opacity: 0;
 
-	&.loaded,
-	&.loading {
-		opacity: 1;
-	}
+  &.loaded,
+  &.loading {
+    opacity: 1;
+  }
 }
 
 .el-disabled {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .image-preloader {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: .3s all ease;
-	width: 90px;
-	height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s all ease;
+  width: 90px;
+  height: auto;
 }
 
 .image-load {
-	opacity: 1;
+  opacity: 1;
 
-	+ .image-preloader {
-		opacity: 0;
-	}
+  + .image-preloader {
+    opacity: 0;
+  }
 }
 
 ::selection {
-	background-color: $accent;
-	color: #fff;
+  background-color: $accent;
+  color: #fff;
 }

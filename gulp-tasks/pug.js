@@ -18,9 +18,9 @@ gulp.task("pug", () => {
 		}))
 		.pipe(gulpif(production, replace("critical-styles.css", "critical-styles.min.css")))
 		.pipe(gulpif(production, replace("critical-scripts.js", "critical-scripts.min.js")))
-		
-		.pipe(gulpif(production, replace("main.css", "main.min.css")))
-		.pipe(gulpif(production, replace("about-us.js", "about-us.min.js")))
+
+		.pipe(gulpif(production, replace("home.css", "home.min.css")))
+		.pipe(gulpif(production, replace("home.js", "home.min.js")))
 		
 		.pipe(gulp.dest(paths.pug.dist))
 		.pipe(browsersync.stream());
